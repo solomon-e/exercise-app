@@ -32,10 +32,13 @@ export const useSignup = () => {
     if (response.ok) {
       // save the user to local storage. Have to store strings inside local storage
       // setItem: to set new item
-      localStorage.setItem('user', JSON.stringify(json)) // restringify the 'json' object
+      //localStorage.setItem('user', JSON.stringify(json)) // restringify the 'json' object
 
       // update the auth context
-      dispatch({ type: 'LOGIN', payload: json })
+      //dispatch({ type: 'LOGIN', payload: json })
+
+      // if response is ok, move to login page
+      window.location.href = '/login'
 
       setisLoading(false)
     }

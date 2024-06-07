@@ -21,7 +21,7 @@ export const useLogin = () => {
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ email, password })
     })
-    console.log('API prefix', process.env.REACT_APP_BACKEND_URL)
+    //console.log('API prefix', process.env.REACT_APP_BACKEND_URL)
     // Need await because its asynchronous
     // On success, returns info with jsonwebtoken. On failure, send error.
     const json = await response.json()

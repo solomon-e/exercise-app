@@ -28,8 +28,8 @@ function App() {
             <Route path='/exercises' element={user ? <Exercises /> : <Navigate to='/' />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/workouts' element={user ? <Workouts /> : <Navigate to='/' />} />
-            <Route path='/login' element={!user ? <Login /> : <Navigate to='/workouts' />} />
-            <Route path='/signup' element={!user ? <Signup /> : <Navigate to='/workouts' />} />
+            <Route path='/login' element={!user ? <Login /> : <Navigate to='/exercises' />} />
+            <Route path='/signup' element={!user ? <Signup /> : <Navigate to='/exercises' />} />
           </Routes>
         </div>
       </BrowserRouter>
@@ -41,7 +41,6 @@ function App() {
 export default App;
 
 // ------------------ NOTE -------------------
-// 
 /*  
 {user ? <Workouts /> : <Navigate to='/' />}
   - if logged in show <Workouts />. if logged out navigate to <Home />
