@@ -13,7 +13,7 @@ export const useSignup = () => {
     // Resets the error at teh start every request
     setError(null)
 
-    const response = await fetch('api/user/signup', {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/user/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ name, email, password })

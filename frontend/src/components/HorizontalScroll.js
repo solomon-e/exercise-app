@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import BodyPart from './BodyPart'
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
+import { ScrollMenu } from 'react-horizontal-scrolling-menu'
 
 const HorizontalScroll = ({ data, bodyPart, setBodyPart, setExercises }) => {
   //console.log('ScrollBodyPart:', bodyPart)

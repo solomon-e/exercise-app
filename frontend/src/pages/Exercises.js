@@ -1,18 +1,11 @@
 import React, { useState } from 'react'
 import SearchExercises from '../components/SearchExercises'
 import ExerciseList from '../components/ExerciseList'
-import Footer from '../components/Footer'
 
 const Exercises = () => {
   const [bodyPart, setBodyPart] = useState('all')
   const [exercises, setExercises] = useState([])
 
-
-  // I added this myself
-  const handleBodyPartChange = async (newBodyPart) => {
-    setBodyPart(newBodyPart)
-    // You can also fetch exercises for the new body part here
-  }
   //console.log('newBodypart:', bodyPart)
   return (
     <div className='md:mt-24'>
@@ -24,11 +17,3 @@ const Exercises = () => {
 }
 
 export default Exercises
-
-/* Original code before change
-
-<div className='m-4 p-4'>
-  <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
-  <ExerciseList exercises={exercises} setExercises={setExercises} bodyPart={bodyPart} />
-</div>
-*/

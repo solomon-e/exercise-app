@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
 
 export const useLogin = () => {
+
   // States
   const [error, setError] = useState(null)
   const [isLoading, setisLoading] = useState(null)
@@ -15,11 +16,12 @@ export const useLogin = () => {
     // Resets the error at teh start every request
     setError(null)
 
-    const response = await fetch('api/user/login', {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/user/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ email, password })
     })
+    console.log('API prefix', process.env.REACT_APP_BACKEND_URL)
     // Need await because its asynchronous
     // On success, returns info with jsonwebtoken. On failure, send error.
     const json = await response.json()

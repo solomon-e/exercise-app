@@ -2,11 +2,11 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <section className='features m-4 p-4 my-10 md:mx-16 md:p-32 md:mt-56 md:mb-36 bg-[#BDC5C7] rounded'>
+    <section className='features m-4 p-4 my-10 md:mx-16 md:p-32 md:mt-56 md:mb-36 bg-[#C8CED0] rounded'>
       <div className='grid md:grid-cols-3 gap-6 p-4'>
         <div className='md:py-24 md:px-10'>
           <h2 className='text-3xl md:text-6xl font-semibold'>Features</h2>
-          <p className='text-gray-500 text-sm md:text-base'>What makes us different?</p>
+          <p className='text-gray-600 text-sm md:text-base'>What makes us different?</p>
         </div>
         <div className='grid md:col-span-2 md:grid-cols-2 md:grid-rows-2'>
           <div className='my-2 md:m-2 md:p-2'>

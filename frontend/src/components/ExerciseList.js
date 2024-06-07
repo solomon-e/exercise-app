@@ -42,17 +42,3 @@ const ExerciseList = ({ exercises, setExercises, bodyPart}) => {
 }
 
 export default ExerciseList
-
-/* Original return
-
-return (
-    <div id='exerciselist' className='mx-auto'>
-      <h2 className='text-2xl p-3'>Showing results...</h2>
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-5 p-3'>
-        {exercises.map((exercise, index) => (
-            <ExerciseCard key={index} exercise={exercise} />
-          ))}
-        </div>
-    </div>
-  )
-*/

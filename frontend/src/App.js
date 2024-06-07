@@ -10,8 +10,6 @@ import Login from './pages/Login';
 import Exercises from './pages/Exercises';
 import Contact from './pages/Contact';
 
-// styles
-import './App.css'
 
 
 function App() {
