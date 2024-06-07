@@ -24,7 +24,7 @@ const Features = () => {
           <div className='my-2 md:m-2 md:p-2'>
             <h2 className='block md:text-2xl font-semibold'>Secure Data Storage</h2>
             <p className='text-sm md:text-base text-gray-600 font-normal '>
-              Your data is safe and secure with us. Plan it, create it, launch it.
+              Your data is safe and secure with us.
             </p>
           </div>
           <div className='my-2 md:m-2 md:p-2'>
