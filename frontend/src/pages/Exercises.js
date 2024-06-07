@@ -6,7 +6,6 @@ const Exercises = () => {
   const [bodyPart, setBodyPart] = useState('all')
   const [exercises, setExercises] = useState([])
 
-  //console.log('newBodypart:', bodyPart)
   return (
     <div className='md:mt-24'>
       <h2 className='text-lg md:text-4xl font-medium p-3 flex items-center justify-center'>Explore various exercises</h2>

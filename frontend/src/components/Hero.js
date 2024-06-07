@@ -9,10 +9,10 @@ const Hero = () => {
           Track Your Fitness Journey Crush Your Goals
         </h1>
         <p className='my-2 md:my-2 text-sm md:text-lg mb-5 md:mb-7'>
-          Reach your fitness goals <span className='font-medium uppercase'>today</span> with our workout app
+          Reach your fitness goals <span className='font-medium uppercase'>today</span> with our workout app.
         </p>
-        <Link to='/signup' className='bg-indigo-500 text-white font-semibold p-3 text-xs md:text-sm rounded hover:shadow-md mt-2'>
-          Get Started Today →
+        <Link to='/signup' className='bg-indigo-500 text-white font-semibold p-2 md:p-3 text-xs md:text-sm rounded hover:shadow-md mt-2'>
+          Get Started →
         </Link>
       </div>
     </section>

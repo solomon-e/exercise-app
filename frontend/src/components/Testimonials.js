@@ -29,6 +29,7 @@ const Testimonials = () => {
     },
   ]
 
+  // Pagination
   const [current, setCurrent] = useState(0)
   const length = testimonial_data.length
 

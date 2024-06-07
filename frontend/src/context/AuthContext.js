@@ -15,7 +15,6 @@ export const authReducer = (state, action) => {
   }
 }
 
-
 // Returns the actual provider of the context created
   // 'children' represents whatever the context provider wraps around
   // Here is represent the App component. Therefore, all components have access to the 'AuthContext'
@@ -37,7 +36,7 @@ export const AuthContextProvider = ({ children }) => {
     }
   }, [])
 
-  console.log('AuthContext state:', state)
+  //console.log('AuthContext state:', state)
 
   return(
     <AuthContext.Provider value={{...state, dispatch}}>

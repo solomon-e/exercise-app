@@ -13,13 +13,11 @@ const Workouts = () => {
   // 'user' an object if logged in
   const { user } = useAuthContext()
 
-  // const [workouts, setWorkouts] = useState(null)
-
   // Fires once, when the component renders
   useEffect(() => {
     const fetchWorkouts = async () => {
       // Fetch the data and store the response in the object (response)
-      const response = await fetch('/api/workouts', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/workouts`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -27,6 +25,8 @@ const Workouts = () => {
 
       // Parse the JSON. json variable stores an array of objects
       const json = await response.json()
+      //.catch(error => console.error('Error fetching workouts:', error))
+      //console.log('JSON variable', json)
 
       if (response.ok) {
         dispatch({ type: 'SET_WORKOUTS', payload: json })
@@ -52,5 +52,5 @@ const Workouts = () => {
     </div>
   )
 }
-// 'workouts mx-2 md:col-span-2 grid md:grid-cols-2 gap-3'
+
 export default Workouts

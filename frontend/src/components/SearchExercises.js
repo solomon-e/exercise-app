@@ -16,17 +16,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   // make search categories show up once at the start
   useEffect (() => {
-    const fetchExercisesData = async () => {
-      //const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions)
-
-      // Gets 32 exercises and displays them on initial page load
-      //const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=32&offset=0', exerciseOptions)
-      
+    const fetchExercisesData = async () => {      
       //console.log('BodyPArtsData', bodyPartsData)
       setBodyParts([...bodyPartsData])
-
-      // sets initial exercises displayed
-      //setExercises(exerciseData)
     }
     
     // call as soon as app loads
@@ -39,9 +31,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       // Adds 500 exercises to the exerciseDate array
       const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=500&offset=0', exerciseOptions)
 
-      console.log('ExerciseData', exerciseData)
+      //console.log('ExerciseData', exerciseData)
       
-
       const searchedExercises = exerciseData.filter((exercise) => 
         exercise.name.toLocaleLowerCase().includes(search)
         || exercise.target.toLocaleLowerCase().includes(search)
@@ -49,23 +40,13 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         || exercise.bodyPart.toLocaleLowerCase().includes(search)
       )
 
-      console.log('Searched exercises:', searchedExercises)
-
-      // Filter exercises by body 
-      
-      const filteredExercises = searchedExercises.filter((exercise) => 
-        exercise.bodyPart === bodyPart || bodyPart === 'all'
-      )
-      console.log('Filtered exercises:', filteredExercises)
-      
+      //console.log('Searched exercises:', searchedExercises)
 
       // clears input
       setSearch('')
 
-      // Original code
+      // Set exercises
       setExercises(searchedExercises)
-      // I Added this
-      //setExercises(filteredExercises)
     }
   }
 

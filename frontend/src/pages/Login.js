@@ -25,7 +25,7 @@ const Login = () => {
 
   return (
     <div className='w-full max-w-md mx-auto rounded items-center m-4 p-4'>
-      <form onSubmit={handleSubmit} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+      <form onSubmit={handleSubmit} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border border-black'>
         <div className='mb-4'>
           <h1 className='font-semibold text-lg md:text-2xl'>Log In</h1>
           <h3 className='mt-1 font-normal text-sm md:text-base text-gray-500'>Enter your details to log in.</h3>

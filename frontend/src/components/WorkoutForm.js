@@ -78,7 +78,7 @@ const WorkoutForm = () => {
       setDifficulty('')
       setError(null)
       setEmptyFields([])
-      console.log('New workout added', json)
+      //console.log('New workout added', json)
       dispatch({ type: 'CREATE_WORKOUT', payload: json})
     }
   }

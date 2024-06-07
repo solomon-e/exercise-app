@@ -6,7 +6,7 @@ const BodyPart = ({ item, bodyPart, setBodyPart, setExercises }) => {
   const searchByBodyPart = async (bodyPart) => {
     // You can also fetch exercises for the new body part here
     setBodyPart(item)
-    console.log('Body part: ', bodyPart)
+    //console.log('Body part: ', bodyPart)
 
     let exerciseByBodyPart = []
 
