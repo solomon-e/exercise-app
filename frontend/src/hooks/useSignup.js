@@ -41,7 +41,7 @@ export const useSignup = () => {
 
       // if response is ok, move to login page
       //window.location.href = '/login' // this only works in development
-      navigate('/login')
+      //navigate('/login')
 
       setisLoading(false)
     }
