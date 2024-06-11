@@ -30,6 +30,15 @@ app.use(cors())
   // - if it does, it attached it to the request object. We can then access it in the request handler with (req.body).
 app.use(express.json())
 
+// MY Addition
+// Serve static files from the build folder
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all route that serves the index.html file for all requests
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+// MY Addition
 
 // Middleware
   // - This middleware logs the request path and method for every request
