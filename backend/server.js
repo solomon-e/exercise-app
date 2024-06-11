@@ -5,6 +5,7 @@ const cors = require('cors')          // imports cors
 const mongoose = require('mongoose')  // imports mongoose
 const workoutRoutes = require('./routes/workouts')  // imports workoutRoutes
 const userRoutes = require('./routes/user')  // imports userRoutes
+const path = require('path'); // add this line
 
 // express app
 const app = express()
