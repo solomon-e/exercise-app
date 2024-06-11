@@ -33,11 +33,11 @@ app.use(express.json())
 
 // MY Addition
 // Serve static files from the build folder
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Catch-all route that serves the index.html file for all requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 // MY Addition
 
